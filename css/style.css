@@ -1,0 +1,112 @@
+/* Font Family */
+@font-face{
+    font-family:DSfont;
+    src: url(fonts/OptimusPrinceps.ttf)
+}
+
+
+/* Master Style */
+
+body {
+    margin: 0px;
+    font-family: DSfont;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Nav Style */
+
+.navWrap {
+    display:flex;
+    justify-content: space-between;
+    padding:38px;
+
+}
+
+.leftNav {
+    display:flex;
+}
+
+.navWrap > .leftNav > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.navLinkWrap {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.navLinkWrap a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.navLinkWrap:hover {
+    border-bottom: 1px solid black;
+}
+
+.navLinkWrap a:hover {
+    color: black !important;
+}
+
+.activeNavLink{
+    border-bottom: 1px solid black;
+}
+.activeNavLink a{
+    color: black !important;
+}
+
+
+/* Home Page */
+
+.twoColumnWrap {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.infoPic img{
+    width: 100%;
+}
+
+.About {
+    padding:30px;
+}
+
+.About h1{
+    color: lightseagreen;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+/* Quiz page */
+
+
+.Quiz {
+    padding:30px;
+}
+
+.Quiz h1{
+    color: lightseagreen;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.Quiz h2 {
+    color: red;
+    margin-top: 10px;
+
+}
+
+
+
+
+
