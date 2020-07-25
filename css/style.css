@@ -16,7 +16,14 @@ body {
     display: grid;
     grid-template-columns: 1fr;
 }
+/* lists */
+ul {
+    list-style-type: circle;
+}
 
+ol {
+    list-style-type: lower-roman;
+}
 /* Nav Style */
 
 .navWrap {

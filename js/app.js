@@ -1,6 +1,9 @@
 'use strict';
 
-setTimeout (function askName(){
+
+
+
+setTimeout(function askName() {
     var name = prompt('Please enter your name');
     var wel = name.toUpperCase();
     var askName = document.getElementById('askName')
@@ -16,9 +19,8 @@ setTimeout (function askName(){
         askName.innerText = message;
     }
 
-},1000
-);
-setTimeout (function questionOne() {
+}, 1000)
+setTimeout(function questionOne() {
     var que = prompt('Was I born in Johnstown, Pa? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionOne = document.getElementById('questionOne');
@@ -36,9 +38,8 @@ setTimeout (function questionOne() {
         var message = "Sorry that is incorrect.";
         questionOne.innerText = message;
     }
-},1000
-);
-setTimeout (function questionTwo() {
+}, 1000)
+setTimeout(function questionTwo() {
     var que = prompt('Was i Raised in Johnstown, PA? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionTwo = document.getElementById('questionTwo');
@@ -60,9 +61,9 @@ setTimeout (function questionTwo() {
 
 
 
-},1000
+}, 1000
 );
-setTimeout (function questionThree() {
+setTimeout(function questionThree() {
     var que = prompt('Did I study Criminal Justice at Cleveland State? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionThree = document.getElementById('questionThree');
@@ -84,9 +85,9 @@ setTimeout (function questionThree() {
 
 
 
-},1000
+}, 1000
 );
-setTimeout (function questionFour() {
+setTimeout(function questionFour() {
     var que = prompt('Do I work IT in the US ARMY? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionFour = document.getElementById('questionFour');
@@ -107,10 +108,10 @@ setTimeout (function questionFour() {
 
 
 
-},1000
+}, 1000
 );
 
-setTimeout (function questionFive() {
+setTimeout(function questionFive() {
     var que = prompt('Am I CCNA cerified? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionFive = document.getElementById('questionFive');
@@ -129,4 +130,89 @@ setTimeout (function questionFive() {
         var pop = alert('Correct!');
         questionFive.innerText = message;
     }
-},1000);
+}, 1000);
+
+
+// LAB 2 No FuNCtIOn zONe
+
+//  question 6
+// 4 attempts
+// exit loop if answered correctly
+// continue 4 iterations until limitis reached
+
+
+var numGuess = prompt('What place in my top ten movies does the movie "Wanted" hold? please enter a number 1-10');
+var i = 0;
+
+
+while (isNaN(numGuess) && i < 3 || numGuess < 1 && i < 3 || numGuess > 10 && i < 3) {
+    numGuess = prompt('Please Enter a number 1-10');
+    console.log(i);
+    i++;
+}
+if (i == 3) {
+    var attempt = alert('Too many attempts')
+}
+if (numGuess == 4) {
+    console.log(`Correct`)
+    var queSixAlert = alert(`Correct`)
+} else if (i !== 3) {
+    var queSixAlert = alert(`Incorrect`)
+
+}
+
+// Question 7
+
+var movies = ['memento', 'inception', 'mandella effect', 'the double', 'sinister', 'hereditary', 'once upon a time in hollywood'
+    , 'pulp fiction', 'the professional'];
+
+var movGuess = prompt('What is the title of one of my top ten favorite movies to exculde the one included in question six');
+
+
+
+
+var x;
+var guess = false;
+
+for (x = 0; x < movies.length; x++) {
+
+    if (movGuess.toLowerCase() === movies[x]) {
+        console.log(`correct`);
+        var pop = alert(`Correct`);
+        x = movies.length;
+        guess = true;
+    }
+    console.log(x);
+    console.log(guess);
+}
+
+ var count = 0;
+
+
+while (guess === false && count < 5) 
+{
+
+    var movGuess = prompt('You may try again a favorite movie of mine?');
+    for (var i = 0; i < movies.length; i++) {
+
+        if (movGuess.toLowerCase() == movies[i]) {
+            console.log(correct);
+            var pop = alert('Correct')
+            i = movies.length;
+            guess = true;
+        }
+    }
+    count++;
+}
+
+var message = ' ';
+var space = ' '
+for( var i = 0; i < movies.length; i++){
+   
+    message = message + space + movies[i];
+    console.log(i);
+}
+
+var opt = alert('Correct options were' + message);
+
+
