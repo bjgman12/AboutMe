@@ -1,6 +1,6 @@
 'use strict';
 
-function askName() {
+setTimeout (function askName(){
     var name = prompt('Please enter your name');
     var wel = name.toUpperCase();
     var askName = document.getElementById('askName')
@@ -16,9 +16,9 @@ function askName() {
         askName.innerText = message;
     }
 
-}
-
-function questionOne() {
+},1000
+);
+setTimeout (function questionOne() {
     var que = prompt('Was I born in Johnstown, Pa? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionOne = document.getElementById('questionOne');
@@ -36,9 +36,9 @@ function questionOne() {
         var message = "Sorry that is incorrect.";
         questionOne.innerText = message;
     }
-}
-
-function questionTwo() {
+},1000
+);
+setTimeout (function questionTwo() {
     var que = prompt('Was i Raised in Johnstown, PA? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionTwo = document.getElementById('questionTwo');
@@ -60,9 +60,9 @@ function questionTwo() {
 
 
 
-}
-
-function questionThree() {
+},1000
+);
+setTimeout (function questionThree() {
     var que = prompt('Did I study Criminal Justice at Cleveland State? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionThree = document.getElementById('questionThree');
@@ -84,9 +84,9 @@ function questionThree() {
 
 
 
-}
-
-function questionFour() {
+},1000
+);
+setTimeout (function questionFour() {
     var que = prompt('Do I work IT in the US ARMY? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionFour = document.getElementById('questionFour');
@@ -107,10 +107,10 @@ function questionFour() {
 
 
 
-}
+},1000
+);
 
-
-function questionFive() {
+setTimeout (function questionFive() {
     var que = prompt('Am I CCNA cerified? Yes or No (y/n)');
     var queProper = que.toLowerCase();
     var questionFive = document.getElementById('questionFive');
@@ -129,4 +129,4 @@ function questionFive() {
         var pop = alert('Correct!');
         questionFive.innerText = message;
     }
-}
+},1000);
