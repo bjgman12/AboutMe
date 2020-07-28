@@ -140,12 +140,18 @@ setTimeout(function questionFive() {
 // exit loop if answered correctly
 // continue 4 iterations until limitis reached
 
+setTimeout(function questionSix() {
+    var numGuess = prompt('What place in my top ten movies does the movie "Wanted" hold? please enter a number 1-10');
+    var i = 0;
 
-var numGuess = prompt('What place in my top ten movies does the movie "Wanted" hold? please enter a number 1-10');
-var i = 0;
-
-
+    if (numGuess < 1) {
+        var low = alert('Entry too low')
+    } else if (numGuess > 10) {
+        var high = alert('Entry too high')
+    }
 while (isNaN(numGuess) && i < 3 || numGuess < 1 && i < 3 || numGuess > 10 && i < 3) {
+
+
     numGuess = prompt('Please Enter a number 1-10');
     console.log(i);
     i++;
@@ -160,9 +166,10 @@ if (numGuess == 4) {
     var queSixAlert = alert(`Incorrect`)
 
 }
+},1000)
 
 // Question 7
-
+setTimeout(function questionSeven(){
 var movies = ['memento', 'inception', 'mandella effect', 'the double', 'sinister', 'hereditary', 'once upon a time in hollywood'
     , 'pulp fiction', 'the professional'];
 
@@ -186,11 +193,10 @@ for (x = 0; x < movies.length; x++) {
     console.log(guess);
 }
 
- var count = 0;
+var count = 0;
 
 
-while (guess === false && count < 5) 
-{
+while (guess === false && count < 5) {
 
     var movGuess = prompt('You may try again a favorite movie of mine?');
     for (var i = 0; i < movies.length; i++) {
@@ -207,12 +213,13 @@ while (guess === false && count < 5)
 
 var message = ' ';
 var space = ' '
-for( var i = 0; i < movies.length; i++){
-   
+for (var i = 0; i < movies.length; i++) {
+
     message = message + space + movies[i];
     console.log(i);
 }
 
 var opt = alert('Correct options were' + message);
+}, 1000)
 
 
