@@ -149,77 +149,83 @@ setTimeout(function questionSix() {
     } else if (numGuess > 10) {
         var high = alert('Entry too high')
     }
-while (isNaN(numGuess) && i < 3 || numGuess < 1 && i < 3 || numGuess > 10 && i < 3) {
+    while (isNaN(numGuess) && i < 3 || numGuess < 1 && i < 3 || numGuess > 10 && i < 3) {
 
 
-    numGuess = prompt('Please Enter a number 1-10');
-    console.log(i);
-    i++;
-}
-if (i == 3) {
-    var attempt = alert('Too many attempts')
-}
-if (numGuess == 4) {
-    console.log(`Correct`)
-    var queSixAlert = alert(`Correct`)
-} else if (i !== 3) {
-    var queSixAlert = alert(`Incorrect`)
+        numGuess = prompt('Please Enter a number 1-10');
+        console.log(i);
+        i++;
+    }
+    if (i == 3) {
+        var attempt = alert('Too many attempts')
+    }
+    if (numGuess == 4) {
+        console.log(`Correct`)
+        var queSixAlert = alert(`Correct`)
+    } else if (i !== 3) {
+        var queSixAlert = alert(`Incorrect`)
 
-}
-},1000)
+    }
+}, 1000)
 
 // Question 7
-setTimeout(function questionSeven(){
-var movies = ['memento', 'inception', 'mandella effect', 'the double', 'sinister', 'hereditary', 'once upon a time in hollywood'
-    , 'pulp fiction', 'the professional'];
+setTimeout(function questionSeven() {
+    var movies = ['memento', 'inception', 'mandella effect', 'the double', 'sinister', 'hereditary', 'once upon a time in hollywood'
+        , 'pulp fiction', 'the professional'];
 
-var movGuess = prompt('What is the title of one of my top ten favorite movies to exculde the one included in question six');
-
-
+    var movGuess = prompt('What is the title of one of my top ten favorite movies to exculde the one included in question six');
 
 
-var x;
-var guess = false;
-
-for (x = 0; x < movies.length; x++) {
-
-    if (movGuess.toLowerCase() === movies[x]) {
-        console.log(`correct`);
-        var pop = alert(`Correct`);
-        x = movies.length;
-        guess = true;
-    }
-    console.log(x);
-    console.log(guess);
-}
-
-var count = 0;
 
 
-while (guess === false && count < 5) {
+    var x;
+    var guess = false;
 
-    var movGuess = prompt('You may try again a favorite movie of mine?');
-    for (var i = 0; i < movies.length; i++) {
+    for (x = 0; x < movies.length; x++) {
 
-        if (movGuess.toLowerCase() == movies[i]) {
-            console.log(correct);
-            var pop = alert('Correct')
-            i = movies.length;
+        if (movGuess.toLowerCase() === movies[x]) {
+            console.log(`correct`);
+            var pop = alert(`Correct`);
+            x = movies.length;
             guess = true;
         }
+        console.log(x);
+        console.log(guess);
     }
-    count++;
-}
 
-var message = ' ';
-var space = ' '
-for (var i = 0; i < movies.length; i++) {
+    var count = 0;
 
-    message = message + space + movies[i];
-    console.log(i);
-}
 
-var opt = alert('Correct options were' + message);
+    while (guess === false && count < 5) {
+
+        var movGuess = prompt('You may try again a favorite movie of mine?');
+        for (var i = 0; i < movies.length; i++) {
+
+            if (movGuess.toLowerCase() == movies[i]) {
+                console.log(correct);
+                var pop = alert('Correct')
+                i = movies.length;
+                guess = true;
+            }
+        }
+        count++;
+    }
+
+    var message = ' ';
+    var space = ' '
+    for (var i = 0; i < movies.length; i++) {
+
+        if (i < movies.length - 1) {
+            message = message + ',' + space + movies[i];
+        } else {
+            message = message + ' and ' + space + movies[i];
+        }
+
+
+        //     console.log(i);
+    }
+
+    var opt = alert('Correct options were' + message);
 }, 1000)
 
 
