@@ -4,7 +4,7 @@
 
 
 setTimeout(function Quiz() {
-
+    var score = 0;
     function askName() {
         var name = prompt('Please enter your name');
         var wel = name.toUpperCase();
@@ -36,6 +36,7 @@ setTimeout(function Quiz() {
             // console.log('Question one correct!');
             var pop = alert('Correct')
             questionOne.innerText = message;
+            score++;
         } else if (queProper == "no" || queProper == "n") {
             var message = "Sorry that is incorrect.";
             questionOne.innerText = message;
@@ -59,6 +60,7 @@ setTimeout(function Quiz() {
             // console.log('Question two correct!');
             var pop = alert('Correct!');
             questionTwo.innerText = message;
+            score++;
         }
 
 
@@ -82,6 +84,7 @@ setTimeout(function Quiz() {
             // console.log('Question three correct!');
             var pop = alert('Correct!');
             questionThree.innerText = message;
+            score++;
         }
 
 
@@ -101,6 +104,7 @@ setTimeout(function Quiz() {
             // console.log('Question Four correct!');
             var pop = alert('Correct!');
             questionFour.innerText = message;
+            score++;
         } else if (queProper == "no" || queProper == "n") {
             var message = "Sorry for both of us that is what i do";
             questionFour.innerText = message;
@@ -128,6 +132,7 @@ setTimeout(function Quiz() {
             // console.log('Question Five correct!');
             var pop = alert('Correct!');
             questionFive.innerText = message;
+            score++;
         }
     }
 
@@ -161,6 +166,7 @@ setTimeout(function Quiz() {
         if (numGuess == 4) {
             console.log(`Correct`)
             var queSixAlert = alert(`Correct`)
+            score++;
         } else if (i !== 3) {
             var queSixAlert = alert(`Incorrect`)
 
@@ -205,6 +211,7 @@ setTimeout(function Quiz() {
                     var pop = alert('Correct')
                     i = movies.length;
                     guess = true;
+                    score++;
                 }
             }
             count++;
@@ -225,6 +232,7 @@ setTimeout(function Quiz() {
         }
 
         var opt = alert('Correct options were' + message);
+        var grade = alert('Your score was ' + score + ' out of 7')
     }
     askName();
     questionOne();
