@@ -193,6 +193,7 @@ setTimeout(function Quiz() {
                 var pop = alert(`Correct`);
                 x = movies.length;
                 guess = true;
+                score++;
             }
             console.log(x);
             console.log(guess);
