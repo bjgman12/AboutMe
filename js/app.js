@@ -231,6 +231,22 @@ setTimeout(function Quiz() {
         alert('Correct options were' + message);
         alert('Your score was ' + score + ' out of 7')
     }
+    function questionEight(){
+        var state = ['ohawo', 'gorjia', 'texsas', 'washngton'];
+        var stateGuess = prompt('guess one state then i have lived in?');
+
+        var guess = false;
+
+        for (var i = 0;i<state.length;i++){
+
+            if (stateGuess.toLowerCase()==state[i]){
+                alert('correct')
+                guess = true;
+                score++;
+            }
+            else {alert('sorry no')}
+        }
+    }
     askName();
     questionOne();
     questionTwo();
