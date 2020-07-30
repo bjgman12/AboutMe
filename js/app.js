@@ -34,7 +34,7 @@ setTimeout(function Quiz() {
         if (queProper == "yes" || queProper == "y") {
             var message = "Correct I was Born there"
             // console.log('Question one correct!');
-            var pop = alert('Correct')
+            alert('Correct')
             questionOne.innerText = message;
             score++;
         } else if (queProper == "no" || queProper == "n") {
@@ -58,7 +58,7 @@ setTimeout(function Quiz() {
         } else if (queProper == "no" || queProper == "n") {
             var message = "Correct, I was raised in Cleveland Ohio.";
             // console.log('Question two correct!');
-            var pop = alert('Correct!');
+            alert('Correct!');
             questionTwo.innerText = message;
             score++;
         }
@@ -82,7 +82,7 @@ setTimeout(function Quiz() {
         } else if (queProper == "no" || queProper == "n") {
             var message = "Correct, I studied Computer Science at Cleveland State.";
             // console.log('Question three correct!');
-            var pop = alert('Correct!');
+            alert('Correct!');
             questionThree.innerText = message;
             score++;
         }
@@ -102,7 +102,7 @@ setTimeout(function Quiz() {
         if (queProper == "yes" || queProper == "y") {
             var message = "Yes, I certainly do";
             // console.log('Question Four correct!');
-            var pop = alert('Correct!');
+            alert('Correct!');
             questionFour.innerText = message;
             score++;
         } else if (queProper == "no" || queProper == "n") {
@@ -130,7 +130,7 @@ setTimeout(function Quiz() {
         } else if (queProper == "no" || queProper == "n") {
             var message = "Correct, I am Sec+ certified.";
             // console.log('Question Five correct!');
-            var pop = alert('Correct!');
+            alert('Correct!');
             questionFive.innerText = message;
             score++;
         }
@@ -149,9 +149,9 @@ setTimeout(function Quiz() {
         var i = 0;
 
         if (numGuess < 1) {
-            var low = alert('Entry too low')
+            alert('Entry too low')
         } else if (numGuess > 10) {
-            var high = alert('Entry too high')
+            alert('Entry too high')
         }
         while (isNaN(numGuess) && i < 3 || numGuess < 1 && i < 3 || numGuess > 10 && i < 3) {
 
@@ -165,10 +165,10 @@ setTimeout(function Quiz() {
         }
         if (numGuess == 4) {
             console.log(`Correct`)
-            var queSixAlert = alert(`Correct`)
+            alert(`Correct`)
             score++;
         } else if (i !== 3) {
-            var queSixAlert = alert(`Incorrect`)
+            alert(`Incorrect`)
 
         }
     }
@@ -180,9 +180,6 @@ setTimeout(function Quiz() {
 
         var movGuess = prompt('What is the title of one of my top ten favorite movies to exculde the one included in question six');
 
-
-
-
         var x;
         var guess = false;
 
@@ -190,7 +187,7 @@ setTimeout(function Quiz() {
 
             if (movGuess.toLowerCase() === movies[x]) {
                 console.log(`correct`);
-                var pop = alert(`Correct`);
+                alert(`Correct`);
                 x = movies.length;
                 guess = true;
                 score++;
@@ -199,23 +196,22 @@ setTimeout(function Quiz() {
             console.log(guess);
         }
 
-        var count = 0;
+        var attemptCount = 0;
 
-
-        while (guess === false && count < 5) {
+        while (guess === false && attemptCount < 5) {
 
             var movGuess = prompt('You may try again a favorite movie of mine?');
             for (var i = 0; i < movies.length; i++) {
 
                 if (movGuess.toLowerCase() == movies[i]) {
                     console.log(correct);
-                    var pop = alert('Correct')
+                    alert('Correct')
                     i = movies.length;
                     guess = true;
                     score++;
                 }
             }
-            count++;
+            attemptCount++;
         }
 
         var message = ' ';
@@ -232,8 +228,8 @@ setTimeout(function Quiz() {
             //     console.log(i);
         }
 
-        var opt = alert('Correct options were' + message);
-        var grade = alert('Your score was ' + score + ' out of 7')
+        alert('Correct options were' + message);
+        alert('Your score was ' + score + ' out of 7')
     }
     askName();
     questionOne();
@@ -243,5 +239,5 @@ setTimeout(function Quiz() {
     questionFive();
     questionSix();
     questionSeven();
-},800)
+}, 800)
 
