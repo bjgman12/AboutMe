@@ -136,14 +136,6 @@ setTimeout(function Quiz() {
         }
     }
 
-
-    // LAB 2 No FuNCtIOn zONe
-
-    //  question 6
-    // 4 attempts
-    // exit loop if answered correctly
-    // continue 4 iterations until limitis reached
-
     function questionSix() {
         var numGuess = prompt('What place in my top ten movies does the movie "Wanted" hold? please enter a number 1-10');
         var i = 0;
