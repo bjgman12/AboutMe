@@ -33,7 +33,6 @@ setTimeout(function Quiz() {
 
         if (queProper == "yes" || queProper == "y") {
             var message = "Correct I was Born there"
-            // console.log('Question one correct!');
             alert('Correct')
             questionOne.innerText = message;
             score++;
@@ -57,7 +56,7 @@ setTimeout(function Quiz() {
             questionTwo.innerText = message;
         } else if (queProper == "no" || queProper == "n") {
             var message = "Correct, I was raised in Cleveland Ohio.";
-            // console.log('Question two correct!');
+
             alert('Correct!');
             questionTwo.innerText = message;
             score++;
@@ -81,7 +80,6 @@ setTimeout(function Quiz() {
             questionThree.innerText = message;
         } else if (queProper == "no" || queProper == "n") {
             var message = "Correct, I studied Computer Science at Cleveland State.";
-            // console.log('Question three correct!');
             alert('Correct!');
             questionThree.innerText = message;
             score++;
@@ -101,7 +99,6 @@ setTimeout(function Quiz() {
 
         if (queProper == "yes" || queProper == "y") {
             var message = "Yes, I certainly do";
-            // console.log('Question Four correct!');
             alert('Correct!');
             questionFour.innerText = message;
             score++;
@@ -129,7 +126,6 @@ setTimeout(function Quiz() {
             questionFive.innerText = message;
         } else if (queProper == "no" || queProper == "n") {
             var message = "Correct, I am Sec+ certified.";
-            // console.log('Question Five correct!');
             alert('Correct!');
             questionFive.innerText = message;
             score++;
@@ -215,9 +211,6 @@ setTimeout(function Quiz() {
             } else {
                 message = message + ' and ' + space + movies[i];
             }
-
-
-            //     console.log(i);
         }
 
         alert('Correct options were' + message);
